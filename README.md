@@ -1,0 +1,1 @@
+A simple Vue3 component for dynamically loading the official Heroicons Vue componets. Instead of using <BeakerIcon /> you can use <DynamicHeroicon name="beaker" /> which allows you to very easily dynamically load heroicons. 
