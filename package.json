@@ -1,0 +1,29 @@
+{
+  "name": "vue-dynamic-heroicons",
+  "private": true,
+  "version": "0.0.1",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue-dynamic-heroicon.umd.js",
+  "module": "./dist/vue-dynamic-heroicon.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-dynamic-heroicon.es.js",
+      "require": "./dist/vue-dynamic-heroicon.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^1.0.6",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.3",
+    "vite": "^2.9.9"
+  }
+}
