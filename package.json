@@ -4,6 +4,12 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/garylake/vue-dynamic-heroicons.git"
+  },
+  "license" : "MIT",
+  "author": "Gary Lake <gary.lake@gmail.com> (https://www.garylake.co.uk/)",
   "main": "./dist/vue-dynamic-heroicon.umd.js",
   "module": "./dist/vue-dynamic-heroicon.es.js",
   "exports": {
