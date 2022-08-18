@@ -1,5 +1,5 @@
 <template>
-    <component :class="finalIconClasses" :is="icon" />
+    <component :class="sizeClasses" :is="icon" />
 </template>
 
 <script>
@@ -17,10 +17,6 @@ export default {
       required: false,
       default: false,
     },
-    iconOverrideClasses: {
-      type: String,
-      required: false,
-    },
     size: {
       type: Number,
       required: false,
@@ -33,8 +29,8 @@ export default {
     icon() {
       return this.icons[this.outline ? 'outline' : 'solid'][this.buildIconComponentName(this.name)];
     },
-    finalIconClasses() {
-      let finalClasses = this.iconOverrideClasses ? this.buildIconOverrideClasses() : {};
+    sizeClasses() {
+      let finalClasses = {};
       // default and/or min button size is 4
       const size = this.size && this.size >= 3 ? this.size : 4;
       finalClasses['h-' + size.toString()] = true;
@@ -49,12 +45,6 @@ export default {
       function clearAndUpper(text) {
         return text.replace(/-/, "").toUpperCase();
       }
-    },
-    buildIconOverrideClasses() {
-      if(this.iconOverrideClasses) {
-        return { [this.iconOverrideClasses]: true };
-      }
-      return false;
     },
   },
 };
